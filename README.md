@@ -1,5 +1,7 @@
 # garlic-bread
 
+[![Build Status](https://travis-ci.org/parsonsmatt/garlic-bread.svg?branch=master)](https://travis-ci.org/parsonsmatt/garlic-bread)
+
 A monad transformer for remembering where you've been.
 
 ## Example: XML parsing
