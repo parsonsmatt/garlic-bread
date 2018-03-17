@@ -22,7 +22,7 @@ dependencies:
 
 library:
   source-dirs: src
-  ghc-options: -Wall -Wcompat -Werror -fwarn-incomplete-uni-patterns
+  ghc-options: -Wall -Wcompat -fwarn-incomplete-uni-patterns
 
 tests:
   garlic-bread-test:
