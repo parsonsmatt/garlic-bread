@@ -103,8 +103,7 @@ exit err =
         $ ReaderT
         $ \crumb -> ExceptT
         $ pure
-        $ Left
-        $ (crumb, err)
+        $ Left (crumb, err)
 
 -- | Sometimes, a 'BreadT' computation short-circuits with an 'exit', but
 -- you don't want it to 'exit' just yet -- perhaps you want to take
