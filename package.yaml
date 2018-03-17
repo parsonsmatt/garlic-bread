@@ -1,0 +1,37 @@
+name:                garlic-bread
+version:             0.1.0.0
+github:              parsonsmatt/garlic-bread
+license:             BSD3
+author:              Matt Parsons
+maintainer:          parsonsmatt@gmail.com
+copyright:           2018 Matt Parsons
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+synopsis:            A monad transformer for keeping track of where you've come from.
+category:            Control
+description:         Please see the README on Github at <https://github.com/parsonsmatt/garlic-bread#readme>
+
+dependencies:
+- base          >= 4.9 && < 5
+- transformers 
+- mtl
+
+library:
+  source-dirs: src
+  ghc-options: -Wall -Wcompat -Werror -fwarn-incomplete-uni-patterns
+
+tests:
+  garlic-bread-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - garlic-bread
+    - hspec
