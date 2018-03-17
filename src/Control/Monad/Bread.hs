@@ -38,9 +38,9 @@ import           Data.Functor.Identity
 
 -- | 'BreadT' is a monad transformer that allows you to leave breadcrumbs
 -- of types @crumb@ while you're performing some effects on the underlying
--- monad @m@. If you reach an error condition, then @'throwError' exit@ will
--- end up returning a @'Left' (crumbs ':!:' exit)@, where @crumbs@ is a list of
--- all breadcrumbs that you've left so far.
+-- monad @m@. If you want to exit early, then @'exit' early@ will end up
+-- returning a @'Left' (crumbs, early)@, where @crumbs@ is a list of all
+-- breadcrumbs that you've left so far.
 --
 -- @since 0.1.0.0
 newtype BreadT crumb exit m a
